@@ -32,7 +32,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-white py-20">
+    <section id="contact" className="section-padding bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-16">
@@ -187,9 +187,7 @@ const Contact = () => {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-violet-700 via-pink-600 to-yellow-500 
-                           text-white text-lg font-semibold py-4 rounded-xl shadow-lg 
-                           transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                className="w-full bg-gradient-to-r from-violet-700 via-pink-600 to-yellow-500 text-white text-base sm:text-lg font-semibold py-3 sm:py-4 rounded-xl shadow-lg transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
               >
                 Submit
               </button>

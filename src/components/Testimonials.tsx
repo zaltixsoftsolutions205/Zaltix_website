@@ -53,7 +53,7 @@ const Testimonials = () => {
           {/* Left Arrow */}
           <button
             onClick={prevTestimonial}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 glass-card p-4 rounded-full hover:scale-110 transition-all duration-300 shadow-lg"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 glass-card p-2 sm:p-4 rounded-full hover:scale-110 transition-all duration-300 shadow-lg"
           >
             <ChevronLeft className="h-8 w-8 text-light-violet" />
           </button>
@@ -61,13 +61,13 @@ const Testimonials = () => {
           {/* Right Arrow */}
           <button
             onClick={nextTestimonial}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 glass-card p-4 rounded-full hover:scale-110 transition-all duration-300 shadow-lg"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 glass-card p-2 sm:p-4 rounded-full hover:scale-110 transition-all duration-300 shadow-lg"
           >
             <ChevronRight className="h-8 w-8 text-light-violet" />
           </button>
 
           {/* Testimonial Card */}
-          <div className="glass-card p-12 rounded-3xl mx-16 transition-all duration-300 hover:shadow-[0_0_25px_rgba(139,92,246,0.4)] hover:border hover:border-violet-300">
+          <div className="glass-card p-6 sm:p-12 rounded-3xl mx-4 sm:mx-16 transition-all duration-300 hover:shadow-[0_0_25px_rgba(139,92,246,0.4)] hover:border hover:border-violet-300">
             <div className="text-center mb-8">
               <div className="flex justify-center mb-4">
                 {[...Array(testimonials[currentTestimonial].rating)].map((_, index) => (
@@ -80,7 +80,7 @@ const Testimonials = () => {
               </blockquote>
             </div>
 
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center px-2 sm:px-0">
               <div className="text-center">
                 <h4 className="text-xl font-semibold text-gray-900 mb-1">
                   {testimonials[currentTestimonial].name}

@@ -60,9 +60,9 @@ const AboutPage = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-2xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-2xl animate-pulse animation-delay-300"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-indigo-400 rounded-full mix-blend-multiply filter blur-2xl animate-pulse animation-delay-600"></div>
+        <div className="absolute top-0 left-0 w-64 sm:w-96 h-64 sm:h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-2xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-64 sm:w-96 h-64 sm:h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-2xl animate-pulse animation-delay-300"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 sm:w-96 h-64 sm:h-96 bg-indigo-400 rounded-full mix-blend-multiply filter blur-2xl animate-pulse animation-delay-600"></div>
       </div>
 
       <Header />
@@ -211,7 +211,7 @@ const AboutPage = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
                 className="glass-card p-5 text-center hover:scale-105 transition-all duration-300 animate-fade-in backdrop-blur-lg border border-white/20 bg-white-200"
               >
-                <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto mb-3 flex items-center justify-center">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto mb-3 flex items-center justify-center">
                   <Users className="h-10 w-10 text-white" />
                 </div>
                 <h3 className="text-lg font-bold text-yellow-300 mb-1">{member.name}</h3>

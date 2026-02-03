@@ -92,7 +92,7 @@ const Clients = () => {
                     <img
                       src={client.logo}
                       alt={`Client Logo ${index + 1}`}
-                      className="h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                      className="h-12 sm:h-16 md:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
                 </a>

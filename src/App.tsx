@@ -4,8 +4,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import ScrollToTop from "./components/ScrollToTop"; // ⬅️ Import ScrollToTop
+import ScrollToTop from "./components/ScrollToTop";
 
+// Core Pages
 import Index from "./pages/Index";
 import ServicesPage from "./pages/ServicesPage";
 import AboutPage from "./pages/AboutPage";
@@ -13,18 +14,18 @@ import CareersPage from "./pages/CareersPage";
 import KnowledgePage from "./pages/KnowledgePage";
 import ContactPage from "./pages/ContactPage";
 import NotFound from "./pages/NotFound";
-import BlogDetailPage from "./pages/BlogDetailPage"; // ⬅️ Import BlogDetailPage
-import PrivacyPolicy from "./pages/PrivacyPolicy"; // ⬅️ Import PrivacyPolicy
-import TermsAndConditions from "./pages/TermsAndConditions"; // ⬅️ Import Terms & Conditions
+import BlogDetailPage from "./pages/BlogDetailPage";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndConditions from "./pages/TermsAndConditions";
 
-// ✅ Service Detail Pages
-import CloudServicesPage from "./pages/services/CloudServicesPage";
-import AppDevelopmentPage from "./pages/services/AppDevelopmentPage";
-import WebDevelopmentPage from "./pages/services/WebDevelopmentPage";
-import AiMlSolutionsPage from "./pages/services/AiMlSolutionsPage";
-import CustomSoftwarePage from "./pages/services/CustomSoftwarePage";
-import WebApplicationPage from "./pages/services/WebApplicationPage";
-import DigitalMarketingPage from "./pages/services/DigitalMarketingPage";
+// ✅ ZALTIX SERVICE DETAIL PAGES (NEW)
+import WebMobileSystems from "./pages/services/web-mobile-systems";
+import AutomationSystems from "./pages/services/automation-systems";
+import AnalyticsVisibility from "./pages/services/analytics-visibility";
+import DecisionIntelligence from "./pages/services/decision-intelligence";
+import AIAssistants from "./pages/services/ai-assistants";
+import CloudFoundations from "./pages/services/cloud-foundations";
+import DigitalMarketing from "./pages/services/digital-marketing";
 
 const queryClient = new QueryClient();
 
@@ -34,8 +35,10 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <ScrollToTop /> {/* ⬅️ Added here */}
+        <ScrollToTop />
+
         <Routes>
+          {/* Core Pages */}
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/about" element={<AboutPage />} />
@@ -43,23 +46,44 @@ const App = () => (
           <Route path="/knowledge" element={<KnowledgePage />} />
           <Route path="/contact" element={<ContactPage />} />
 
-          {/* ✅ Blog Details */}
+          {/* Blog */}
           <Route path="/blog/:id" element={<BlogDetailPage />} />
 
-          {/* ✅ Privacy & Terms */}
+          {/* Legal */}
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
 
-          {/* ✅ Service Details */}
-          <Route path="/services/cloud-services" element={<CloudServicesPage />} />
-          <Route path="/services/app-development" element={<AppDevelopmentPage />} />
-          <Route path="/services/web-development" element={<WebDevelopmentPage />} />
-          <Route path="/services/web-application" element={<WebApplicationPage />} />
-          <Route path="/services/ai-ml-solutions" element={<AiMlSolutionsPage />} />
-          <Route path="/services/custom-software" element={<CustomSoftwarePage />} />
-          <Route path="/services/digital-marketing" element={<DigitalMarketingPage />} />
+          {/* ✅ ZALTIX SERVICE ROUTES */}
+          <Route
+            path="/services/web-mobile-systems"
+            element={<WebMobileSystems />}
+          />
+          <Route
+            path="/services/automation-systems"
+            element={<AutomationSystems />}
+          />
+          <Route
+            path="/services/analytics-visibility"
+            element={<AnalyticsVisibility />}
+          />
+          <Route
+            path="/services/decision-intelligence"
+            element={<DecisionIntelligence />}
+          />
+          <Route
+            path="/services/ai-assistants"
+            element={<AIAssistants />}
+          />
+          <Route
+            path="/services/cloud-foundations"
+            element={<CloudFoundations />}
+          />
+          <Route
+            path="/services/digital-marketing"
+            element={<DigitalMarketing />}
+          />
 
-          {/* Catch-All */}
+          {/* Catch All */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

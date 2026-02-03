@@ -79,13 +79,13 @@ const About = () => {
               <div className="grid grid-cols-2 gap-8 text-center">
                 <div>
                   <div className="text-4xl font-bold text-purple-800 mb-2">
-                    15+
+                    5+
                   </div>
                   <div className="text-gray-600">Projects Completed</div>
                 </div>
                 <div>
                   <div className="text-4xl font-bold text-pink-600 mb-2">
-                    10+
+                    5+
                   </div>
                   <div className="text-gray-600">Happy Clients</div>
                 </div>
